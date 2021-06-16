@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="b_text_size">34sp</dimen>
+    <dimen name="b_text_size_table">32sp</dimen>
     <dimen name="squere_size">80dp</dimen>
+    <dimen name="img_scale_size">0.83</dimen>
+    <dimen name="bottom_letters">24sp</dimen>
+    <dimen name="top_guideLine">220dp</dimen>
+    <dimen name="button_sizeX2">180dp</dimen>
 </resources>
