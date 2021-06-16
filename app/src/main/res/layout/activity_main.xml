@@ -7,252 +7,271 @@
 
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main">
 
-        <Button
-            android:id="@+id/K_sub"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="−"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K_add"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K6"
-            app:layout_constraintTop_toBottomOf="@+id/K_mult" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        <Button
-            android:id="@+id/comma"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text=","
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/K0"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/K1" />
+            app:srcCompat="@drawable/skull_rastr">
 
-        <Button
-            android:id="@+id/K0"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="0"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/K_kalc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/comma"
-            app:layout_constraintTop_toBottomOf="@+id/K2" />
 
-        <Button
-            android:id="@+id/K3"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="3"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K_kalc"
-            app:layout_constraintEnd_toStartOf="@+id/K_add"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K2"
-            app:layout_constraintTop_toBottomOf="@+id/K6" />
+        </ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:id="@+id/K2"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="2"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K0"
-            app:layout_constraintEnd_toStartOf="@+id/K3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K1"
-            app:layout_constraintTop_toBottomOf="@+id/K5" />
 
-        <Button
-            android:id="@+id/K1"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="1"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/comma"
-            app:layout_constraintEnd_toStartOf="@+id/K2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/K4" />
+    <Button
+        android:id="@+id/K_sub"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="−"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K6"
+        app:layout_constraintTop_toBottomOf="@+id/K_mult" />
 
-        <Button
-            android:id="@+id/K_add"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="+"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K_kalc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K3"
-            app:layout_constraintTop_toBottomOf="@+id/K_sub" />
+    <Button
+        android:id="@+id/comma"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text=","
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/K0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/K1" />
 
-        <Button
-            android:id="@+id/K4"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="4"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K1"
-            app:layout_constraintEnd_toStartOf="@+id/K5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/K7" />
+    <Button
+        android:id="@+id/K0"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="0"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/K_kalc"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/comma"
+        app:layout_constraintTop_toBottomOf="@+id/K2" />
 
-        <Button
-            android:id="@+id/K5"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="5"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K2"
-            app:layout_constraintEnd_toStartOf="@+id/K6"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K4"
-            app:layout_constraintTop_toBottomOf="@+id/K8" />
+    <Button
+        android:id="@+id/K3"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="3"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K_kalc"
+        app:layout_constraintEnd_toStartOf="@+id/K_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K2"
+        app:layout_constraintTop_toBottomOf="@+id/K6" />
 
-        <Button
-            android:id="@+id/K6"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="6"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K3"
-            app:layout_constraintEnd_toStartOf="@+id/K_sub"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K5"
-            app:layout_constraintTop_toBottomOf="@+id/K9" />
+    <Button
+        android:id="@+id/K2"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="2"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K0"
+        app:layout_constraintEnd_toStartOf="@+id/K3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K1"
+        app:layout_constraintTop_toBottomOf="@+id/K5" />
 
-        <Button
-            android:id="@+id/K_mult"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="×"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K_sub"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K9"
-            app:layout_constraintTop_toBottomOf="@+id/K_div" />
+    <Button
+        android:id="@+id/K1"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="1"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/comma"
+        app:layout_constraintEnd_toStartOf="@+id/K2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/K4" />
 
-        <Button
-            android:id="@+id/K_div"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="÷"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K_mult"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K_perc"
-            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <Button
+        android:id="@+id/K_add"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="+"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K_kalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K3"
+        app:layout_constraintTop_toBottomOf="@+id/K_sub" />
 
-        <Button
-            android:id="@+id/K_perc"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="%"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K9"
-            app:layout_constraintEnd_toStartOf="@+id/K_div"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K_del"
-            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <Button
+        android:id="@+id/K4"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="4"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K1"
+        app:layout_constraintEnd_toStartOf="@+id/K5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/K7" />
 
-        <Button
-            android:id="@+id/K_AC"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="AC"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/K7"
-            app:layout_constraintEnd_toStartOf="@+id/K_del"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <Button
+        android:id="@+id/K5"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="5"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K2"
+        app:layout_constraintEnd_toStartOf="@+id/K6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K4"
+        app:layout_constraintTop_toBottomOf="@+id/K8" />
 
-        <Button
-            android:id="@+id/K_del"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="⌫"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K8"
-            app:layout_constraintEnd_toStartOf="@+id/K_perc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K_AC"
-            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <Button
+        android:id="@+id/K6"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="6"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K3"
+        app:layout_constraintEnd_toStartOf="@+id/K_sub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K5"
+        app:layout_constraintTop_toBottomOf="@+id/K9" />
 
-        <Button
-            android:id="@+id/K9"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="9"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K6"
-            app:layout_constraintEnd_toStartOf="@+id/K_mult"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K8"
-            app:layout_constraintTop_toBottomOf="@+id/K_perc" />
+    <Button
+        android:id="@+id/K_mult"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="×"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K_sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K9"
+        app:layout_constraintTop_toBottomOf="@+id/K_div" />
 
-        <Button
-            android:id="@+id/K8"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="8"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K5"
-            app:layout_constraintEnd_toStartOf="@+id/K9"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K7"
-            app:layout_constraintTop_toBottomOf="@+id/K_del" />
+    <Button
+        android:id="@+id/K_div"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="÷"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K_mult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K_perc"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-        <Button
-            android:id="@+id/K7"
-            android:layout_width="@dimen/squere_size"
-            android:layout_height="@dimen/squere_size"
-            android:text="7"
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/K4"
-            app:layout_constraintEnd_toStartOf="@+id/K8"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/K_AC" />
+    <Button
+        android:id="@+id/K_perc"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="%"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K9"
+        app:layout_constraintEnd_toStartOf="@+id/K_div"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K_del"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-        <TextView
-            android:id="@+id/tv_main"
-            android:layout_width="414dp"
-            android:layout_height="121dp"
-            android:text="123456789"
-            android:textSize="80sp"
+    <Button
+        android:id="@+id/K_AC"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="AC"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/K7"
+        app:layout_constraintEnd_toStartOf="@+id/K_del"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/K_del"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="⌫"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K8"
+        app:layout_constraintEnd_toStartOf="@+id/K_perc"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K_AC"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-        <Button
-            android:id="@+id/K_kalc"
-            android:layout_width="180dp"
-            android:layout_height="@dimen/squere_size"
-            android:text="="
-            android:textSize="@dimen/b_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/K_add"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/K3"
-            app:layout_constraintTop_toBottomOf="@+id/K3" />
+    <Button
+        android:id="@+id/K9"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="9"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K6"
+        app:layout_constraintEnd_toStartOf="@+id/K_mult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K8"
+        app:layout_constraintTop_toBottomOf="@+id/K_perc" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="195dp" />
+    <Button
+        android:id="@+id/K8"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="8"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K5"
+        app:layout_constraintEnd_toStartOf="@+id/K9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/K7"
+        app:layout_constraintTop_toBottomOf="@+id/K_del" />
+
+    <Button
+        android:id="@+id/K7"
+        android:layout_width="@dimen/squere_size"
+        android:layout_height="@dimen/squere_size"
+        android:text="7"
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/K4"
+        app:layout_constraintEnd_toStartOf="@+id/K8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/K_AC" />
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="414dp"
+        android:layout_height="121dp"
+        android:text="123456789"
+        android:textSize="80sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/K_kalc"
+        android:layout_width="180dp"
+        android:layout_height="@dimen/squere_size"
+        android:text="="
+        android:textSize="@dimen/b_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/K_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/K3"
+        app:layout_constraintTop_toBottomOf="@+id/K3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="195dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
