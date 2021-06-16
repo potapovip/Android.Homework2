@@ -4,18 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="30dp"
-    android:layout_marginTop="150dp"
-    android:layout_marginEnd="30dp"
-    android:layout_marginBottom="150dp"
+
     tools:context=".MainActivity">
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
 
 
         <Button
@@ -159,7 +149,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/K_perc"
-            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <Button
             android:id="@+id/K_perc"
@@ -171,7 +161,7 @@
             app:layout_constraintEnd_toStartOf="@+id/K_div"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/K_del"
-            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <Button
             android:id="@+id/K_AC"
@@ -183,7 +173,7 @@
             app:layout_constraintEnd_toStartOf="@+id/K_del"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <Button
             android:id="@+id/K_del"
@@ -195,7 +185,7 @@
             app:layout_constraintEnd_toStartOf="@+id/K_perc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/K_AC"
-            app:layout_constraintTop_toBottomOf="@+id/tv_main" />
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <Button
             android:id="@+id/K9"
@@ -235,28 +225,34 @@
 
         <TextView
             android:id="@+id/tv_main"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/squere_size"
-            android:text="TextView"
-            android:textSize="48sp"
-            app:layout_constraintBottom_toTopOf="@+id/K_div"
+            android:layout_width="414dp"
+            android:layout_height="121dp"
+            android:text="123456789"
+            android:textSize="80sp"
+
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/K_kalc"
-            android:layout_width="149dp"
-            android:layout_height="70dp"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/squere_size"
             android:text="="
             android:textSize="@dimen/b_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/K_add"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/K0"
+            app:layout_constraintStart_toStartOf="@+id/K3"
             app:layout_constraintTop_toBottomOf="@+id/K3" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="195dp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
