@@ -7,4 +7,6 @@
     <dimen name="bottom_letters">24sp</dimen>
     <dimen name="top_guideLine">220dp</dimen>
     <dimen name="button_sizeX2">180dp</dimen>
+    <dimen name="TV_fomtsize">80sp</dimen>
+    <dimen name="TV_heightOfMonitor">120dp</dimen>
 </resources>
