@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="b_text_size">34sp</dimen>
-    <dimen name="b_text_size_table">32sp</dimen>
+    <dimen name="b_text_size">24sp</dimen>
+    <dimen name="b_text_size_table">34sp</dimen>
     <dimen name="squere_size">80dp</dimen>
     <dimen name="img_scale_size">0.83</dimen>
     <dimen name="bottom_letters">24sp</dimen>
     <dimen name="top_guideLine">220dp</dimen>
     <dimen name="button_sizeX2">180dp</dimen>
-    <dimen name="TV_fomtsize">80sp</dimen>
-    <dimen name="TV_heightOfMonitor">120dp</dimen>
+    <dimen name="TV_fomtsize">60sp</dimen>
+    <dimen name="TV_heightOfMonitor">80dp</dimen>
     <dimen name="mar_s_left">10dp</dimen>
-    <dimen name="mar_t">5dp</dimen>
-    <dimen name="mar_b">5dp</dimen>
+    <dimen name="mar_t">0dp</dimen>
+    <dimen name="mar_b">0dp</dimen>
     <dimen name="mar_E_right">10dp</dimen>
     <dimen name="mar_e">5dp</dimen>
     <dimen name="mar_s">5dp</dimen>

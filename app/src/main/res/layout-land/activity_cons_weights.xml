@@ -42,8 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineTop"
-        app:srcCompat="@drawable/skull_rastr"
-        android:contentDescription="@string/CD_BGImage_skull">
+        app:srcCompat="@drawable/skull_rastr">
     </ImageView>
 
 
@@ -406,7 +405,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.98" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
