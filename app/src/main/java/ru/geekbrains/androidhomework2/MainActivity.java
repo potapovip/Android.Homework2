@@ -1,14 +1,18 @@
 package ru.geekbrains.androidhomework2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Locale;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textView;
     private Button button_0;
@@ -30,13 +34,57 @@ public class MainActivity extends AppCompatActivity {
     private Button button_mult;
     private Button button_perc;
     private Button button_sub;
-    private int counter;
+    private Counters counters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cons_weights);
 
+        init();
+        initListeners();
+        button_2.setOnClickListener(this);
+        button_3.setOnClickListener(this);
+
+
+
+
+    }
+    public void button_0_onClic(View view){
+        counters.increaseCounter1();
+        textView.setText(String.format(Locale.getDefault(), "%d",counters.getCounter_1()));
+    }
+
+    private void initListeners(){
+        button_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counters.increaseCounter2();
+                Toast toast = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_2()),Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+    }
+
+
+    @Override
+    public void  onClick(View v) {
+        switch (v.getId()){
+            case R.id.K2:
+                counters.increaseCounter3();
+                Toast toast = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_3()),Toast.LENGTH_SHORT);
+                toast.show();
+                break;
+            case R.id.K3:
+                counters.increaseCounter4();
+                Toast toast1 = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_4()),Toast.LENGTH_SHORT);
+                toast1.show();
+                break;
+        }
+
+    }
+
+    private void init(){
         textView = findViewById(R.id.tv_main);
         button_0 = findViewById(R.id.K0);
         button_1 = findViewById(R.id.K1);
@@ -57,12 +105,7 @@ public class MainActivity extends AppCompatActivity {
         button_mult = findViewById(R.id.K_mult);
         button_perc = findViewById(R.id.K_perc);
         button_sub = findViewById(R.id.K_sub);
-        counter = 0;
 
-
-    }
-    public void button_0_onClic(View view){
-        counter++;
-        textView.setText(counter+"");
+        counters = new Counters();
     }
 }

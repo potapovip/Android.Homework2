@@ -98,7 +98,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/K_comma"
-        app:layout_constraintTop_toBottomOf="@+id/K2" />
+        app:layout_constraintTop_toBottomOf="@+id/K2"
+        android:onClick="button_0_onClic"/>
 
     <Button
         android:id="@+id/K1"
