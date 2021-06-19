@@ -56,13 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initListeners(){
-        button_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counters.increaseCounter2();
-                Toast toast = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_2()),Toast.LENGTH_SHORT);
-                toast.show();
-            }
+        button_1.setOnClickListener(v -> {
+            counters.increaseCounter2();
+            Toast toast = Toast.makeText(this,String.format(Locale.getDefault(),"%d",counters.getCounter_2()),Toast.LENGTH_SHORT);
+            toast.show();
         });
     }
 
@@ -72,16 +69,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.K2:
                 counters.increaseCounter3();
-                Toast toast = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_3()),Toast.LENGTH_SHORT);
-                toast.show();
+                showToast(String.valueOf(counters.getCounter_3()));
                 break;
             case R.id.K3:
                 counters.increaseCounter4();
-                Toast toast1 = Toast.makeText(getApplicationContext(),String.format(Locale.getDefault(),"%d",counters.getCounter_4()),Toast.LENGTH_SHORT);
-                toast1.show();
+                showToast(String.format(Locale.getDefault(),"%d",counters.getCounter_4()));
                 break;
         }
 
+    }
+    public void showToast(String text){
+        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     private void init(){
