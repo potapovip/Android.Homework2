@@ -14,39 +14,14 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity  {
 
-
-    private Button button_0;
-    private Button button_1;
-    private Button button_2;
-    private Button button_3;
-    private Button button_4;
-    private Button button_5;
-    private Button button_6;
-    private Button button_7;
-    private Button button_8;
-    private Button button_9;
-    private Button button_comma;
-    private Button button_ac;
-    private Button button_add;
-    private Button button_del;
-    private Button button_kalc;
-    private Button button_div;
-    private Button button_mult;
-    private Button button_perc;
-    private Button button_sub;
+    private Calculator calculator;
     private TextView textView;
-    private Counters counters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cons_weights);
-        init();
 
-    }
-
-
-    private void init() {
         int[] numbersIds = new int[]{
                 R.id.K0,
                 R.id.K1,
@@ -66,7 +41,33 @@ public class MainActivity extends AppCompatActivity  {
                 R.id.K_div,
                 R.id.K_mult
         };
+        calculator = new Calculator();
+        textView = findViewById(R.id.tv_main);
 
+        View.OnClickListener numberButtonClicListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculator.onNumPressed(v.getId());
+                textView.setText(calculator.getText());
+            }
+        };
+
+        View.OnClickListener actionButtonClicListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculator.onNumPressed(v.getId());
+                textView.setText(calculator.getText());
+            }
+        };
+
+        for (int i = 0; i < numbersIds.length; i++) {
+            findViewById(numbersIds[i]).setOnClickListener(numberButtonClicListener);
+        }
+
+        for (int i = 0; i < actionsIds.length; i++) {
+            findViewById(actionsIds[i]).setOnClickListener(actionButtonClicListener);
+        }
 
     }
+
 }
