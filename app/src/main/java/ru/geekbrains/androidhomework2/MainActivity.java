@@ -21,6 +21,18 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cons_weights);
+        
+        init();
+
+
+
+
+    }
+
+    private  void init(){
+
+        calculator = new Calculator();
+        textView = findViewById(R.id.tv_main);
 
         int[] numbersIds = new int[]{
                 R.id.K0,
@@ -41,8 +53,6 @@ public class MainActivity extends AppCompatActivity  {
                 R.id.K_div,
                 R.id.K_mult
         };
-        calculator = new Calculator();
-        textView = findViewById(R.id.tv_main);
 
         View.OnClickListener numberButtonClicListener = new View.OnClickListener() {
             @Override
