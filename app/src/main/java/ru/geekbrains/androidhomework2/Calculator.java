@@ -2,7 +2,10 @@ package ru.geekbrains.androidhomework2;
 
 import android.os.Parcelable;
 
-public class Calculator {
+import java.io.Serializable;
+
+public class Calculator implements Serializable {
+
 
     int firstArg;
     int secondArg;
