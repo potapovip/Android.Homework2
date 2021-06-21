@@ -13,9 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/TV_heightOfMonitor"
         android:background="@color/white"
-        android:maxLength="9"
-        android:maxLines="1"
-        android:text="@string/nums_exmpl"
         android:textAlignment="textEnd"
         android:textColor="@color/black"
         android:textIsSelectable="false"
@@ -38,13 +35,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:backgroundTint="@color/Button_color"
+        android:contentDescription="@string/CD_BGImage_skull"
         app:layout_constraintBottom_toBottomOf="@id/guidelineBot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineTop"
-        app:srcCompat="@drawable/skull_rastr"
-        android:contentDescription="@string/CD_BGImage_skull">
-    </ImageView>
+        app:srcCompat="@drawable/skull_rastr"></ImageView>
 
 
     <Button
@@ -98,8 +94,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/K_comma"
-        app:layout_constraintTop_toBottomOf="@+id/K2"
-        android:onClick="button_0_onClic"/>
+        app:layout_constraintTop_toBottomOf="@+id/K2" />
 
     <Button
         android:id="@+id/K1"

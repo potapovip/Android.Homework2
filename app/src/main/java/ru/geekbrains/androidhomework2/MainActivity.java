@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity  {
         };
         int[] actionsIds = new int[]{
                 R.id.K_add,
-                R.id.K_del,
+                R.id.K_sub,
                 R.id.K_kalc,
                 R.id.K_div,
                 R.id.K_mult
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity  {
         View.OnClickListener actionButtonClicListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculator.onNumPressed(v.getId());
+                calculator.onActionPressed(v.getId());
                 textView.setText(calculator.getText());
             }
         };
