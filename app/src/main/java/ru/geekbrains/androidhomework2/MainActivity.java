@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity  {
         calculator = new Calculator();
         textView = findViewById(R.id.tv_main);
 
+
         int[] numbersIds = new int[]{
                 R.id.K0,
                 R.id.K1,

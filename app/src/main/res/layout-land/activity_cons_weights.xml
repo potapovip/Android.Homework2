@@ -132,7 +132,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/K_AC" />
+        app:layout_constraintTop_toBottomOf="@+id/K_Options" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K5"
@@ -188,7 +188,7 @@
         app:layout_constraintEnd_toStartOf="@+id/K_div"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/K_del"
+        app:layout_constraintStart_toEndOf="@+id/K_AC"
         app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
     <com.google.android.material.button.MaterialButton
@@ -211,7 +211,7 @@
         app:layout_constraintTop_toBottomOf="@+id/K9" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/K_del"
+        android:id="@+id/K_AC"
         android:layout_width="@dimen/LW_button"
         android:layout_height="@dimen/LH_button"
         android:layout_marginStart="@dimen/mar_s"
@@ -226,7 +226,7 @@
         app:layout_constraintEnd_toStartOf="@+id/K_perc"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/K_AC"
+        app:layout_constraintStart_toEndOf="@+id/K_Options"
         app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
     <com.google.android.material.button.MaterialButton
@@ -303,7 +303,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/K7"
-        app:layout_constraintTop_toBottomOf="@+id/K_del" />
+        app:layout_constraintTop_toBottomOf="@+id/K_AC" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_add"
@@ -362,7 +362,7 @@
         app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/K_AC"
+        android:id="@+id/K_Options"
         android:layout_width="@dimen/LW_button"
         android:layout_height="@dimen/LH_button"
         android:layout_marginStart="@dimen/mar_s_left"
@@ -374,7 +374,7 @@
         android:textAlignment="center"
         android:textSize="@dimen/b_text_size"
         app:layout_constraintBottom_toTopOf="@+id/K7"
-        app:layout_constraintEnd_toStartOf="@+id/K_del"
+        app:layout_constraintEnd_toStartOf="@+id/K_AC"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
