@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyButtonStyle">
+        <item name="android:insetTop">@dimen/insetTop</item>
+        <item name="android:insetBottom">@dimen/insetBot</item>
+        <item name="layout_constraintHorizontal_bias">0.5</item>
+        <item name="layout_constraintHorizontal_weight">1</item>
+        <item name="android:layout_width">@dimen/LW_button</item>
+        <item name="android:layout_height">@dimen/LH_button</item>
+        <item name="android:textSize">@dimen/b_text_size</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>

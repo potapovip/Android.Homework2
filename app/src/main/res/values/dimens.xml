@@ -17,4 +17,6 @@
     <dimen name="mar_s">5dp</dimen>
     <dimen name="LW_button">0dp</dimen>
     <dimen name="LH_button">0dp</dimen>
+    <dimen name="insetTop">3dp</dimen>
+    <dimen name="insetBot">3dp</dimen>
 </resources>
