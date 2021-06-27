@@ -22,5 +22,6 @@
     <color name="red">#FF0000</color>
     <color name="main_bg">#F8BA00</color>
     <color name="Button_color">#AE181019</color>
-    <color name="nightWB">#1A1AAE</color>
+    <color name="nightWB">#FF050417</color>
+    <color name="NightButtonColor">#3BFFFFFF</color>
 </resources>

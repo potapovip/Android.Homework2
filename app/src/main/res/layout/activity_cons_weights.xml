@@ -9,16 +9,11 @@
 
     <TextView
         android:id="@+id/tv_main"
+        style="@style/MyTextViewSryle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TV_heightOfMonitor"
-        android:background="@color/white"
-        android:textAlignment="textEnd"
-        android:textColor="@color/black"
-        android:textIsSelectable="false"
-        android:textSize="@dimen/TV_fomtsize"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -33,7 +28,6 @@
         android:id="@+id/IV_skull"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:backgroundTint="@color/Button_color"
         android:contentDescription="@string/CD_BGImage_skull"
         app:layout_constraintBottom_toBottomOf="@id/guidelineBot"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,12 +38,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_sub"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_E_right"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcRightButtons"
         android:text="@string/minus"
         app:layout_constraintBottom_toTopOf="@+id/K_add"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,11 +47,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_comma"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s_left"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcLeftButtons"
         android:text="@string/comma"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBot"
         app:layout_constraintEnd_toStartOf="@+id/K0"
@@ -72,9 +57,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K0"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_0"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBot"
         app:layout_constraintEnd_toStartOf="@id/K_del"
@@ -83,12 +65,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K1"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s_left"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcLeftButtons"
         android:text="@string/_1"
         app:layout_constraintBottom_toTopOf="@+id/K_comma"
         app:layout_constraintEnd_toStartOf="@+id/K2"
@@ -97,12 +74,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K7"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s_left"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcLeftButtons"
         android:text="@string/_7"
         app:layout_constraintBottom_toTopOf="@+id/K4"
         app:layout_constraintEnd_toStartOf="@+id/K8"
@@ -112,11 +84,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K5"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_5"
         app:layout_constraintBottom_toTopOf="@+id/K2"
         app:layout_constraintEnd_toStartOf="@+id/K6"
@@ -126,11 +93,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K9"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_9"
         app:layout_constraintBottom_toTopOf="@+id/K6"
         app:layout_constraintEnd_toStartOf="@+id/K_mult"
@@ -140,11 +102,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_perc"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/perc"
         app:layout_constraintBottom_toTopOf="@+id/K9"
         app:layout_constraintEnd_toStartOf="@+id/K_div"
@@ -154,11 +111,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K6"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_6"
         app:layout_constraintBottom_toTopOf="@+id/K3"
         app:layout_constraintEnd_toStartOf="@+id/K_sub"
@@ -168,11 +120,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_AC"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/ac"
         app:layout_constraintBottom_toTopOf="@+id/K8"
         app:layout_constraintEnd_toStartOf="@+id/K_perc"
@@ -182,11 +129,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K3"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_3"
         app:layout_constraintBottom_toTopOf="@+id/K_del"
         app:layout_constraintEnd_toStartOf="@+id/K_add"
@@ -195,12 +137,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K4"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s_left"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcLeftButtons"
         android:text="@string/_4"
         app:layout_constraintBottom_toTopOf="@+id/K1"
         app:layout_constraintEnd_toStartOf="@+id/K5"
@@ -210,11 +147,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K2"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_2"
         app:layout_constraintBottom_toTopOf="@+id/K0"
         app:layout_constraintEnd_toStartOf="@+id/K3"
@@ -224,10 +156,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_del"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/backspace"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBot"
         app:layout_constraintEnd_toStartOf="@+id/K_kalc"
@@ -237,11 +165,6 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K8"
         style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
         android:text="@string/_8"
         app:layout_constraintBottom_toTopOf="@+id/K5"
         app:layout_constraintEnd_toStartOf="@+id/K9"
@@ -250,11 +173,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_add"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_E_right"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcRightButtons"
         android:text="@string/add"
         app:layout_constraintBottom_toTopOf="@id/K_kalc"
         app:layout_constraintEnd_toEndOf="parent"
@@ -263,12 +182,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_mult"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_E_right"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcRightButtons"
         android:text="@string/mult"
         app:layout_constraintBottom_toTopOf="@+id/K_sub"
         app:layout_constraintEnd_toEndOf="parent"
@@ -277,12 +191,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_div"
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_E_right"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcRightButtons"
         android:text="@string/div"
         app:layout_constraintBottom_toTopOf="@+id/K_mult"
         app:layout_constraintEnd_toEndOf="parent"
@@ -291,13 +200,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_Options"
-
-        style="@style/MyButtonStyle"
-        android:layout_marginStart="@dimen/mar_s_left"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_e"
-        android:layout_marginBottom="@dimen/mar_b"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcLeftButtons"
         app:icon="@drawable/ic_switch_button3"
         app:iconTintMode="multiply"
         app:layout_constraintBottom_toTopOf="@+id/K7"
@@ -307,10 +210,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_kalc"
-        style="@style/MyButtonStyle"
-        android:layout_marginTop="@dimen/mar_t"
-        android:layout_marginEnd="@dimen/mar_E_right"
-        android:backgroundTint="@color/Button_color"
+        style="@style/CalcRightButtons"
         android:text="@string/equally"
         app:layout_constraintBottom_toTopOf="@+id/guidelineBot"
         app:layout_constraintEnd_toEndOf="parent"

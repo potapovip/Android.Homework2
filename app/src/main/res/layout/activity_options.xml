@@ -10,7 +10,7 @@
         android:id="@+id/switchNight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Night theme"
+        android:text="Custom theme"
         android:textSize="@dimen/b_text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
