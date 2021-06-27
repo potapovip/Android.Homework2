@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -23,6 +25,19 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_cons_weights);
 
         init();
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+        Uri data = intent.getData();
+        if (Intent.ACTION_SEND.equals(action)){
+            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+//            textView.setText(sharedText);
+
+
+            calculator.setFirstArg(Integer.parseInt(sharedText));
+            calculator.setState(Calculator.State.firstArgInput);
+            textView.setText(calculator.getText());
+        }
 
 
 

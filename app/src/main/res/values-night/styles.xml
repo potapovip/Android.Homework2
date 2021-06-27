@@ -31,7 +31,6 @@
 
     <style name="CalcRightButtons" parent="MyButtonStyle">
         <item name="android:layout_marginEnd">@dimen/mar_E_right</item>
-
     </style>
 
 </resources>

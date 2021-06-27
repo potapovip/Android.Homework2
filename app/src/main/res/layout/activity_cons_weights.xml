@@ -23,7 +23,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.23119015" />
 
-
     <ImageView
         android:id="@+id/IV_skull"
         android:layout_width="match_parent"
@@ -33,8 +32,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineTop"
-        app:srcCompat="@drawable/skull_rastr">
-
+        app:srcCompat="@drawable/skull_rastr"
+        android:alpha="0.5">
     </ImageView>
 
 
@@ -219,13 +218,10 @@
         app:layout_constraintStart_toEndOf="@id/K_del"
         app:layout_constraintTop_toBottomOf="@+id/K_add" />
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

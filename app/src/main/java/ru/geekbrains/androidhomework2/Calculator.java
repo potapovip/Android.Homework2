@@ -15,10 +15,26 @@ public class Calculator implements Serializable {
     private State state;
     private int actionSelected;
 
-    private enum State{
+    public enum State{
         firstArgInput,
         secondArgInput,
         resultShow
+    }
+
+    public int getFirstArg() {
+        return firstArg;
+    }
+
+    public void setFirstArg(int firstArg) {
+        this.firstArg = firstArg;
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
     }
 
     public Calculator() {
