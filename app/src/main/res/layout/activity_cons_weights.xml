@@ -33,7 +33,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineTop"
-        app:srcCompat="@drawable/skull_rastr"></ImageView>
+        app:srcCompat="@drawable/skull_rastr">
+
+    </ImageView>
 
 
     <com.google.android.material.button.MaterialButton
