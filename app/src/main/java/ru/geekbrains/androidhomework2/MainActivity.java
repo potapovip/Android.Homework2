@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity  {
            sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
             calculator.setFirstArg(Integer.parseInt(sharedText));
             calculator.setState(Calculator.State.firstArgInput);
-            calculator.onNumShared(sharedText);
+            calculator.onNumShared(Integer.parseInt(sharedText));
             textView.setText(sharedText);
 //            textView.setText(calculator.getText());
         }

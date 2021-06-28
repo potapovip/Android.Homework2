@@ -46,7 +46,7 @@ public class Calculator implements Serializable {
     public Calculator() {
         this.state = State.firstArgInput;
     }
-    public void onNumShared (String text) {
+    public void onNumShared (int text) {
         if (state == State.resultShow) {
             state = State.firstArgInput;
             inputStr.append(text);
