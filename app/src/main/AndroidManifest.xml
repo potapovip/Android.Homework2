@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidHomework2">
         <activity android:name=".Options">
-
+            <intent-filter>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <action android:name="android.intent.action.Options" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

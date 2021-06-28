@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity  {
     private TextView textView;
     public final String KEY = "key_calculator";
     String sharedText;
+    private Button options;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,16 @@ public class MainActivity extends AppCompatActivity  {
     private void init(){
         calculator = new Calculator();
         textView = findViewById(R.id.tv_main);
+        options = findViewById(R.id.K_Options);
+        options.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intentToOption = new Intent("android.intent.action.Options");
+                        startActivity(intentToOption);
+                    }
+                }
+        );
         int[] numbersIds = new int[]{
                 R.id.K0,
                 R.id.K1,
