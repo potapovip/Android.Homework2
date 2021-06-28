@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity  {
     private Calculator calculator;
     private TextView textView;
     public final String KEY = "key_calculator";
+    String sharedText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,31 +27,24 @@ public class MainActivity extends AppCompatActivity  {
 
         init();
         Intent intent = getIntent();
-        String action = intent.getAction();
-        String type = intent.getType();
-        Uri data = intent.getData();
+    String action = intent.getAction();
+//        String type = intent.getType();
+//        Uri data = intent.getData();
         if (Intent.ACTION_SEND.equals(action)){
-            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-//            textView.setText(sharedText);
-
-
+           sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
             calculator.setFirstArg(Integer.parseInt(sharedText));
             calculator.setState(Calculator.State.firstArgInput);
-            textView.setText(calculator.getText());
+            calculator.onNumShared(sharedText);
+            textView.setText(sharedText);
+//            textView.setText(calculator.getText());
         }
-
-
-
     }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putSerializable(KEY, calculator);
-
     }
-
-
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
@@ -63,11 +57,8 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     private void init(){
-
         calculator = new Calculator();
         textView = findViewById(R.id.tv_main);
-
-
         int[] numbersIds = new int[]{
                 R.id.K0,
                 R.id.K1,
@@ -80,6 +71,7 @@ public class MainActivity extends AppCompatActivity  {
                 R.id.K8,
                 R.id.K9
         };
+
         int[] actionsIds = new int[]{
                 R.id.K_add,
                 R.id.K_sub,
@@ -111,9 +103,5 @@ public class MainActivity extends AppCompatActivity  {
         for (int i = 0; i < actionsIds.length; i++) {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonClicListener);
         }
-
-
-
     }
-
 }

@@ -10,6 +10,7 @@ public class Calculator implements Serializable {
     int firstArg;
     int secondArg;
 
+
     private StringBuilder inputStr = new StringBuilder();
 
     private State state;
@@ -37,10 +38,20 @@ public class Calculator implements Serializable {
         this.state = state;
     }
 
+    public void setInputStr(StringBuilder inputStr) {
+        this.inputStr = inputStr;
+    }
+
+
     public Calculator() {
         this.state = State.firstArgInput;
     }
-
+    public void onNumShared (String text) {
+        if (state == State.resultShow) {
+            state = State.firstArgInput;
+            inputStr.append(text);
+        }
+    }
     public void onNumPressed (int buttonId){
         if (state == State.resultShow){
             state = State.firstArgInput;
