@@ -17,7 +17,7 @@
         <item name="android:layout_marginBottom">@dimen/mar_b</item>
     </style>
 
-    <style name="MyTextViewSryle">
+    <style name="MyTextViewStyle">
         <item name="android:background">@color/white</item>
         <item name="android:textAlignment">textEnd</item>
         <item name="android:textColor">@color/black</item>

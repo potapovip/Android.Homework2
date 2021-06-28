@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_main"
-        style="@style/MyTextViewSryle"
+        style="@style/MyTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TV_heightOfMonitor"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
