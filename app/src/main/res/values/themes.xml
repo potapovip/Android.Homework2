@@ -15,5 +15,17 @@
         <item name="android:windowBackground">@color/main_bg</item>
     </style>
 
+<style name="MyCoolStyle" parent="MyButtonStyle">
+    <item name="android:layout_marginStart">@dimen/mar_s_0</item>
+    <item name="android:layout_marginTop">@dimen/mar_t_0</item>
+    <item name="android:layout_marginEnd">@dimen/mar_e</item>
+    <item name="android:layout_marginBottom">@dimen/mar_b_0</item>
+</style>
+    <style name="NotMyNoralStyle" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:fontFamily">monospace</item>
+    </style>
+    <style name="WhateverStyle" parent="ThemeOverlay.MaterialComponents.Dark">
+        <item name="android:fontFamily">cursive</item>
+    </style>
 
 </resources>

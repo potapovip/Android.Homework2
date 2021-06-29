@@ -19,4 +19,8 @@
     <dimen name="LH_button">0dp</dimen>
     <dimen name="insetTop">3dp</dimen>
     <dimen name="insetBot">3dp</dimen>
+    <dimen name="mar_e_0">0dp</dimen>
+    <dimen name="mar_s_0">0dp</dimen>
+    <dimen name="mar_t_0">0dp</dimen>
+    <dimen name="mar_b_0">0dp</dimen>
 </resources>
