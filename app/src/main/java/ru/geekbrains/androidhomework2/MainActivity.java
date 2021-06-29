@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cons_weights);
         setTheme(convertCodeToStyle(getAppTheme()));
+
+        setContentView(R.layout.activity_cons_weights);
+
         init();
         initChanger();
         Intent intent = getIntent();
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity  {
     private final int MyCoolStyle = 0;
     private final int NotMyNoralStyle = 1;
     private final int WhateverStyle = 2;
+    private int i =0;
 
     private final String KEY_PREF = "key";
     private final String APP_THEME = "theme";
@@ -136,6 +139,8 @@ public class MainActivity extends AppCompatActivity  {
                 return R.style.WhateverStyle;
         }
     }
+
+
 
     private void initChanger() {
         initButton(findViewById(R.id.radioButton), MyCoolStyle);

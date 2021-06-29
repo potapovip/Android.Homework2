@@ -49,6 +49,7 @@ public class Options extends AppCompatActivity {
             public void onClick(View v) {
                 setAppTheme(codeStyle);
                 recreate();
+
             }
         });
     }
