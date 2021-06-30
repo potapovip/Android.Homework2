@@ -1,22 +1,16 @@
 package ru.geekbrains.androidhomework2;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 
-
-public class MainActivity extends Options  {
+public class MainActivity extends Options {
 
     private Calculator calculator;
     private TextView textView;
@@ -24,28 +18,14 @@ public class MainActivity extends Options  {
     String sharedText;
     private Button options;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setTheme(convertCodeToStyle(getAppTheme()));
-
         setContentView(R.layout.activity_cons_weights);
-
         init();
-        Intent intent = getIntent();
-    String action = intent.getAction();
-//        String type = intent.getType();
-//        Uri data = intent.getData();
-        if (Intent.ACTION_SEND.equals(action)){
-           sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-            calculator.setFirstArg(Integer.parseInt(sharedText));
-            calculator.setState(Calculator.State.firstArgInput);
-            calculator.onNumShared(Integer.parseInt(sharedText));
-            textView.setText(sharedText);
-//            textView.setText(calculator.getText());
-        }
+        openSharedText();
     }
+
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -65,11 +45,22 @@ public class MainActivity extends Options  {
         calculator = (Calculator) savedInstanceState.getSerializable(KEY);
         restoreCalc();
     }
+
+    private void openSharedText() {
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        if (Intent.ACTION_SEND.equals(action)) {
+            sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+            calculator.setFirstArg(Double.parseDouble(sharedText));
+            textView.setText(sharedText);
+        }
+    }
+
     private void restoreCalc() {
         textView.setText(calculator.getText());
     }
 
-    private void init(){
+    private void init() {
         calculator = new Calculator();
         textView = findViewById(R.id.tv_main);
         options = findViewById(R.id.K_Options);
@@ -92,7 +83,10 @@ public class MainActivity extends Options  {
                 R.id.K6,
                 R.id.K7,
                 R.id.K8,
-                R.id.K9
+                R.id.K9,
+                R.id.K_comma,
+                R.id.K_del,
+                R.id.K_AC
         };
 
         int[] actionsIds = new int[]{
@@ -100,10 +94,9 @@ public class MainActivity extends Options  {
                 R.id.K_sub,
                 R.id.K_kalc,
                 R.id.K_div,
-                R.id.K_mult
+                R.id.K_mult,
+                R.id.K_perc
         };
-
-
 
         View.OnClickListener numberButtonClicListener = new View.OnClickListener() {
             @Override
@@ -129,14 +122,4 @@ public class MainActivity extends Options  {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonClicListener);
         }
     }
-
-
-
-
-
-
-
-
-
-
 }

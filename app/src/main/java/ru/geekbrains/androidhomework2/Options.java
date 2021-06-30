@@ -22,7 +22,6 @@ public class Options extends AppCompatActivity {
     private final int MyCoolStyle = 0;
     private final int NotMyNoralStyle = 1;
     private final int WhateverStyle = 2;
-
     private final String KEY_PREF = "key";
     private final String APP_THEME = "theme";
 
@@ -49,7 +48,6 @@ public class Options extends AppCompatActivity {
             public void onClick(View v) {
                 setAppTheme(codeStyle);
                 recreate();
-                
             }
         });
     }
@@ -59,8 +57,6 @@ public class Options extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(APP_THEME, codeStyle);
         editor.apply();
-//        codeStyle = 9999;
-//        Log.d("mylogs", sharedPreferences.getInt(APP_THEME, codeStyle)+"");
     }
 
     protected int getAppTheme() {

@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tv_main"
-        style="@style/MyTextViewSryle"
+        style="@style/MyTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="@dimen/TV_heightOfMonitor"
         app:layout_constraintBottom_toTopOf="@+id/guidelineTop"
@@ -35,6 +35,7 @@
         app:srcCompat="@drawable/skull_rastr"
         android:alpha="0.5">
     </ImageView>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/K_sub"
@@ -223,4 +224,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
