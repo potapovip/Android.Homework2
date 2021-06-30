@@ -49,7 +49,7 @@ public class Options extends AppCompatActivity {
             public void onClick(View v) {
                 setAppTheme(codeStyle);
                 recreate();
-
+                
             }
         });
     }
@@ -63,7 +63,7 @@ public class Options extends AppCompatActivity {
 //        Log.d("mylogs", sharedPreferences.getInt(APP_THEME, codeStyle)+"");
     }
 
-    private int getAppTheme() {
+    protected int getAppTheme() {
         SharedPreferences sharedPreferences = getSharedPreferences(KEY_PREF, MODE_PRIVATE);
         return sharedPreferences.getInt(APP_THEME, MyCoolStyle);
     }

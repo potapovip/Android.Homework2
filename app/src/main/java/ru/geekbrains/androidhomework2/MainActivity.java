@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends Options  {
 
     private Calculator calculator;
     private TextView textView;
@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity  {
     String sharedText;
     private Button options;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(convertCodeToStyle(getAppTheme()));
+//        setTheme(convertCodeToStyle(getAppTheme()));
 
         setContentView(R.layout.activity_cons_weights);
 
         init();
-        initChanger();
         Intent intent = getIntent();
     String action = intent.getAction();
 //        String type = intent.getType();
@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity  {
             textView.setText(sharedText);
 //            textView.setText(calculator.getText());
         }
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setTheme(getAppTheme());
+        recreate();
     }
 
     @Override
@@ -97,6 +103,8 @@ public class MainActivity extends AppCompatActivity  {
                 R.id.K_mult
         };
 
+
+
         View.OnClickListener numberButtonClicListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -121,54 +129,14 @@ public class MainActivity extends AppCompatActivity  {
             findViewById(actionsIds[i]).setOnClickListener(actionButtonClicListener);
         }
     }
-    private final int MyCoolStyle = 0;
-    private final int NotMyNoralStyle = 1;
-    private final int WhateverStyle = 2;
-    private int i =0;
-
-    private final String KEY_PREF = "key";
-    private final String APP_THEME = "theme";
-
-    private int convertCodeToStyle(int codeStyle) {
-        switch (codeStyle) {
-            case MyCoolStyle:
-                return R.style.MyCoolStyle;
-            case NotMyNoralStyle:
-                return R.style.NotMyNoralStyle;
-            default:
-                return R.style.WhateverStyle;
-        }
-    }
 
 
 
-    private void initChanger() {
-        initButton(findViewById(R.id.radioButton), MyCoolStyle);
-        initButton(findViewById(R.id.radioButton1), NotMyNoralStyle);
-        initButton(findViewById(R.id.radioButton2), WhateverStyle);
-    }
 
-    private void initButton(RadioButton button, int codeStyle) {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setAppTheme(codeStyle);
-                recreate();
-            }
-        });
-    }
 
-    private void setAppTheme(int codeStyle) {
-        SharedPreferences sharedPreferences = getSharedPreferences(KEY_PREF, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(APP_THEME, codeStyle);
-        editor.apply();
-//        codeStyle = 9999;
-//        Log.d("mylogs", sharedPreferences.getInt(APP_THEME, codeStyle)+"");
-    }
 
-    private int getAppTheme() {
-        SharedPreferences sharedPreferences = getSharedPreferences(KEY_PREF, MODE_PRIVATE);
-        return sharedPreferences.getInt(APP_THEME, MyCoolStyle);
-    }
+
+
+
+
 }
