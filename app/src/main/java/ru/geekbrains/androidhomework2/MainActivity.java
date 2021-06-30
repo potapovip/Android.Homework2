@@ -49,7 +49,8 @@ public class MainActivity extends Options {
     private void openSharedText() {
         Intent intent = getIntent();
         String action = intent.getAction();
-        if (Intent.ACTION_SEND.equals(action)) {
+        String type = intent.getType();
+        if (Intent.ACTION_SEND.equals(action)&&type.equals("text/plain")) {
             sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
             calculator.setFirstArg(Double.parseDouble(sharedText));
             textView.setText(sharedText);
